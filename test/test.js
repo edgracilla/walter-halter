@@ -18,10 +18,70 @@ describe('Server Test', function () {
     }, 300)
   })
   
-  it('should', function (done) {
+  it('postive test', function (done) {
     this.timeout(5000)
     
     let data = {
+      ref: '80cd7077-cbd9-5a2a-96a4-9f1ca2013482',
+      schemaObj: {
+        title: 'title',
+        content: 'content'
+      },
+      arrObjDeep:[{
+        foo: [{
+          bar: 'nested'
+        }]
+      },{
+        foo: [{
+          bar: 'deep'
+        },{
+          bar: 'value'
+        }]
+      }]
+    }
+
+    let _id = '80cd7077-cbd9-5a2a-96a4-9f1ca2013487'
+
+    axios.post(`${host}/xx/${_id}?email=foo@bar.com&enums=jhon`, data, conf).then(ret => {
+      if (ret.status === 200) {
+        if (!ret.data.length) {
+          done()
+        } else {
+          console.log('\nFIN:', ret.data)
+        }
+      }
+    }).catch(err => {
+      console.log(err)
+    })
+  })
+
+  it('negative test', function (done) {
+    this.timeout(5000)
+    
+    let data = {
+      ref: '',
+      schemaObj: {
+        title: '',
+        content: ''
+      },
+      arrRef:['this','should','be','uuidv5'],
+      arrObj:[{
+        foo:'bar',
+        status: 'bar'
+      }],
+      arrObjDeep:[{
+        foo: [{
+          bar: ''
+        }]
+      },{
+        foo: [{
+          bar: ''
+        },{
+          bar: ''
+        }]
+      }],
+
+      // used in deeper testing
       aa: [
         {
           bb: {
@@ -39,19 +99,18 @@ describe('Server Test', function () {
             }]
           }
         }
-      ],
-      price: {
-        child: 1
-      },
-      pick: ['a','b'],
-      infos: [{
-        title: 'tt'
-      }]
+      ]
     }
-    let _id = '80cd7077-cbd9-5a2a-96a4-9f1ca2013487'
 
-    axios.post(`${host}/xx/${_id}?email=foobar.com&name=john`, data, conf).then(ret => {
-      if (ret.status === 200) done()
+    let _id = ''
+
+    axios.post(`${host}/xx/${_id}?email=&enums=dd`, data, conf).then(ret => {
+      if (ret.status === 200) {
+        console.log('\nFIN:', ret.data)
+        if (ret.data.length) {
+          done()
+        }
+      }
     }).catch(err => {
       console.log(err)
     })

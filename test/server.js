@@ -21,7 +21,7 @@ server.use(halter({
     unique: (value, modelName, field) => {
       return new BPromise((resolve, reject) => {
         return setTimeout(() => {
-          console.log('x--', value, modelName, field)
+          console.log('[executing promise custom validator]', value, modelName, field)
           resolve()
         }, 500)
       })
@@ -31,8 +31,7 @@ server.use(halter({
 
 server.post('/xx/:_id', function (req, res, next) {
   req.halt(schema).then(result => {
-    console.log('\nFIN:', result)
-    res.send(req.params)
+    res.send(result)
     return next()
   })
 });
