@@ -2,14 +2,14 @@
   "aa.*.bb.cc.*.dd.*": {
     "isUUID": {
       "options": [5],
-      "message": "Value for field '%path%' must be a valid UUIDv5"
+      "msg": "Value for field 'aa.*.bb.cc.*.dd.*' must be a valid UUIDv5"
     },
     "required": {
-      "message": "Value for field '%path%' is required"
+      "msg": "Value for field 'aa.*.bb.cc.*.dd.*' is required"
     },
     "unique": {
       "options": ["TestModel", "field"],
-      "message": "Value for field '%path%' must be unique"
+      "msg": "Value for field 'aa.*.bb.cc.*.dd.*' must be unique"
     }
   }
 }

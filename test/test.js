@@ -27,7 +27,7 @@ describe('Server Test', function () {
           bb: {
             xx: 'xx0',
             cc: [{
-              dd: ['80cd7077-cbd9-5a2a-96a4-9f1ca2013481', '80cd7077-cbd9-5a2a-96a4-9f1ca2013482']
+              dd: ['80cd7077-cbd9-5a2a-96a4-9f1ca2013481x', '80cd7077-cbd9-5a2a-96a4-9f1ca2013482']
             }]
           }
         },
@@ -35,7 +35,7 @@ describe('Server Test', function () {
           bb: {
             xx: 'xx1',
             cc: [{
-              dd: ['80cd7077-cbd9-5a2a-96a4-9f1ca2013483', '80cd7077-cbd9-5a2a-96a4-9f1ca2013484']
+              dd: ['80cd7077-cbd9-5a2a-96a4-9f1ca2013483x', '80cd7077-cbd9-5a2a-96a4-9f1ca2013484']
             }]
           }
         }

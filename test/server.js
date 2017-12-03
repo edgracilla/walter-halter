@@ -23,7 +23,7 @@ server.use(halter({
         return setTimeout(() => {
           console.log('x--', value, modelName, field)
           resolve()
-        }, 1000)
+        }, 500)
       })
     }
   }
