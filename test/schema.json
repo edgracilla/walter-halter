@@ -47,7 +47,9 @@
       "options": [5],
       "msg": "Value for field 'arrRef.*' must be a valid UUIDv5"
     },
-    "optional": true
+    "required": {
+      "msg": "Value for field 'arrRef.*' is required"
+    }
   },
   "arrObj.*.foo": {
     "isUUID": {

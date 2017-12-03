@@ -27,6 +27,7 @@ describe('Server Test', function () {
         title: 'title',
         content: 'content'
       },
+      arrRef: ['80cd7077-cbd9-5a2a-96a4-9f1ca2013482'],
       arrObjDeep:[{
         foo: [{
           bar: 'nested'
@@ -64,7 +65,7 @@ describe('Server Test', function () {
         title: '',
         content: ''
       },
-      arrRef:['this','should','be','uuidv5'],
+      arrRef:[],
       arrObj:[{
         foo:'bar',
         status: 'bar'
