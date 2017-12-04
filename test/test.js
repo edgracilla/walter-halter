@@ -17,7 +17,7 @@ describe('Server Test', function () {
       process.exit(1)
     }, 300)
   })
-  
+
   it('postive test', function (done) {
     this.timeout(5000)
     
@@ -116,5 +116,24 @@ describe('Server Test', function () {
       console.log(err)
     })
   })
+
+  // it('hot tester', function (done) {
+  //   let _id = '80cd7077-cbd9-5a2a-96a4-9f1ca2013487'
+  //   let data = {
+  //     price: {
+  //       child: 1,
+  //       adult: 1
+  //     }
+  //   }
+
+  //   axios.post(`${host}/xx/${_id}`, data, conf).then(ret => {
+  //     if (ret.status === 200) {
+  //       console.log('\nFIN:', ret.data)
+  //       done()
+  //     }
+  //   }).catch(err => {
+  //     console.log(err)
+  //   })
+  // })
 })
 
