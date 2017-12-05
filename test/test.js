@@ -135,5 +135,23 @@ describe('Server Test', function () {
   //     console.log(err)
   //   })
   // })
+
+  /**
+   * location (body, params, query)
+   * optional/required
+   * 
+   * field
+   * obj
+   * arr
+   * arrObj
+   * arrDeep
+   * arrObjDeep
+   * schemaObj
+   * arrSchemaObj
+   * arrSchemaObjarr
+   * arrSchemaObjarrObj
+   * arrSchemaObjarrObjSchema
+   * 
+   */
 })
 
