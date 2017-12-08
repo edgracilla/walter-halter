@@ -25,87 +25,11 @@ describe('Server Test', function () {
         // obj: {
         //   foo: 'foo'
         // },
-        arrnest1: [
-          {
-            foo: {
-              bar: 'foobar0',
-              x: 'x'
-            }
-          },
-          {
-            foo: {
-              bar: 'foobar1'
-            }
-          }
-        ],
-        arrnest2: [
-          {
-            foo: {
-              bar: {
-                nar: 'foobarnar0'
-              }
-            }
-          },
-          {
-            foo: {
-              bar: {
-                nar: 'foobarnar1'
-              }
-            }
-          }
-        ],
-        arrnest3: [
-          {
-            foo: [
-              {
-                bar: [
-                  {
-                    nar: ['a', 'b']
-                  },
-                  {
-                    nar: ['c', 'd', 'dd']
-                  }
-                ]
-              },
-              {
-                bar: [
-                  {
-                    nar: ['e', 'f', 'ff']
-                  },
-                  {
-                    nar: ['g', 'h']
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            foo: [
-              {
-                bar: [
-                  {
-                    nar: ['i', 'j', {x: 'x'}]
-                  },
-                  {
-                    nar: ['k', 'l']
-                  }
-                ]
-              },
-              {
-                bar: [
-                  {
-                    nar: ['m', 'n']
-                  },
-                  {
-                    nar: ['o', 'p']
-                  }
-                ]
-              }
-            ]
-          },
-        ],
+        
 
-        arr1d: ['a', 'b', 'c', {x: 'x'}, 'd'],
+        arr1d: [
+          'a', 'b', 'c', {x: 'x'}, 'd'
+        ],
         arr2d: [
           ['a', 'b'], 
           ['c', 'd', {x: 'x'}],
@@ -145,6 +69,77 @@ describe('Server Test', function () {
               ['gg', 'hh', {xx: 'xx'}],
             ],
           ],
+        ],
+
+        arr1dObj1: [
+          {foo: 'a'}, 
+          {foo: 'b'},
+          {foo: 'c'}
+        ],
+        arr1dObj2: [
+          {foo: {bar: 'a', x: 'x'}},
+          {foo: {bar: 'b'}}
+        ],
+        arr1dObj3: [
+          {foo: {bar: {nar: 'aa'}}},
+          {foo: {bar: {nar: 'bb', x: 'x'}}}
+        ],
+
+        arr2dObj1: [
+          [{foo: 'a'}, {foo: 'b'}, {foo: 'c'}],
+          [{foo: 'd'}, {foo: 'e'}, {foo: 'f'}]
+        ],
+        arr2dObj2: [
+          [
+            {foo: {bar: 'a'}},
+            {foo: {bar: 'b'}}
+          ],
+          [
+            {foo: {bar: 'aa'}},
+            {foo: {bar: 'bb'}}
+          ],
+        ],
+
+        arrNest1: [
+          [
+            {foo: {bar: [['a', 'b'], ['c', 'd']]}},
+            {foo: {bar: [['e', 'f'], ['g', 'h']]}}
+          ],
+          [{foo: {bar: [['i', 'j'], ['k', 'l']]}}],
+        ],
+        arrNest2: [
+          {
+            foo: [
+              {
+                bar: [
+                  {nar: ['a', 'b']},
+                  {nar: ['c', 'd', 'dd']}
+                ]
+              },
+              {
+                bar: [
+                  {nar: ['e', 'f', 'ff']},
+                  {nar: ['g', 'h']}
+                ]
+              }
+            ]
+          },
+          {
+            foo: [
+              {
+                bar: [
+                  {nar: ['i', 'j', {x: 'x'}]},
+                  {nar: ['k', 'l']}
+                ]
+              },
+              {
+                bar: [
+                  {nar: ['m', 'n']},
+                  {nar: ['o', 'p']}
+                ]
+              }
+            ]
+          },
         ],
       }
 

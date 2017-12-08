@@ -181,7 +181,19 @@ module.exports = () => {
         required: true
       }]]]],
 
-      arrnest1: [{
+      arr1dObj1: [{
+        foo: {
+          type: String,
+          required: true
+        }
+      }],
+      arr2dObj1: [[{
+        foo: {
+          type: String,
+          required: true
+        }
+      }]],
+      arr1dObj2: [{
         foo: {
           bar: {
             type: String,
@@ -189,7 +201,16 @@ module.exports = () => {
           }
         }
       }],
-      arrnest2: [{
+      arr2dObj2: [[{
+        foo: {
+          bar: {
+            type: String,
+            required: true,
+            // minlength: 5,
+          }
+        }
+      }]],
+      arr1dObj3: [{
         foo: {
           bar: {
             nar: {
@@ -199,7 +220,16 @@ module.exports = () => {
           }
         }
       }],
-      arrnest3: [{
+
+      arrNest1: [[{
+        foo: {
+          bar: [[{
+            type: String,
+            required: true
+          }]]
+        }
+      }]],
+      arrNest2: [{
         foo: [{
           bar:  [{
             nar: [{

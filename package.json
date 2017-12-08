@@ -1,6 +1,6 @@
 {
   "name": "walter-halter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
     "mocha": "^4.0.1",
     "mongoose": "^4.13.6",
     "restify": "^6.3.4",
-    "walter-builder": "0.0.2"
+    "walter-builder": "0.0.3"
   },
   "dependencies": {
     "bluebird": "^3.5.1",

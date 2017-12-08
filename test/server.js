@@ -32,13 +32,21 @@ server.use(halter({
 server.post('/hot-test', function (req, res, next) {
   let schema = builder
     // .select(['_id', 'obj.foo' ])
-    // .select('arr1d.*')
-    // .select('arr2d.*.*')
-    // .select('arr3d.*.*.*')
-    // .select('arr4d.*.*.*.*')    
-    // .select('arrnest1.*.foo.bar')
-    // .select('arrnest2.*.foo.bar.nar')
-    .select('arrnest3.*.foo.*.bar.*.nar.*')
+
+    .select('arr1d.*')
+    .select('arr2d.*.*')
+    .select('arr3d.*.*.*')
+    .select('arr4d.*.*.*.*')
+
+    .select('arr1dObj1.*.foo')
+    .select('arr1dObj2.*.foo.bar')
+    .select('arr1dObj3.*.foo.bar.nar')
+
+    .select('arr2dObj1.*.*.foo')
+    .select('arr2dObj2.*.*.foo.bar')
+
+    .select('arrNest1.*.*.foo.bar.*.*')
+    .select('arrNest2.*.foo.*.bar.*.nar.*')
 
     .location('params')
     .build()
