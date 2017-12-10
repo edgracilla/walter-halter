@@ -22,11 +22,11 @@ describe('Server Test', function () {
     it('should ok', function (done) {
       let data = {
         // _id: '2218f0ad-c5e3-50dc-afcc-26325fd77398',
-        // arrObj: [{
-        //   foo: 'aa',
-        //   bar: 'bb',
-        // }],
-        arrObj: []
+        arrObj: [{
+          foo: 'aa',
+          bar: 'bb',
+        }],
+        // arrObj: []
       }
 
       axios.post(`${host}/hot-test`, data, conf).then(ret => {

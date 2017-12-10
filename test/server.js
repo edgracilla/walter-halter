@@ -51,8 +51,8 @@ server.post('/hot-test', function (req, res, next) {
     // .location('params')
 
     // TODO: select 'arrObj.*' instead of 'arrObj.*.foo'
-    .select(['arrObj.*.foo', 'arrObj.*.bar'])
-    .unstrict('arrObj.*')
+    .select(['arrObj.*'])
+    // .unstrict('arrObj.*')
     .build()
 
     // console.log(schema)
