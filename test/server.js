@@ -33,25 +33,30 @@ server.post('/hot-test', function (req, res, next) {
   let schema = builder
     // .select(['_id', 'obj.foo' ])
 
-    .select('arr1d.*')
-    .select('arr2d.*.*')
-    .select('arr3d.*.*.*')
-    .select('arr4d.*.*.*.*')
+    // .select('arr1d.*')
+    // .select('arr2d.*.*')
+    // .select('arr3d.*.*.*')
+    // .select('arr4d.*.*.*.*')
 
-    .select('arr1dObj1.*.foo')
-    .select('arr1dObj2.*.foo.bar')
-    .select('arr1dObj3.*.foo.bar.nar')
+    // .select('arr1dObj1.*.foo')
+    // .select('arr1dObj2.*.foo.bar')
+    // .select('arr1dObj3.*.foo.bar.nar')
 
-    .select('arr2dObj1.*.*.foo')
-    .select('arr2dObj2.*.*.foo.bar')
+    // .select('arr2dObj1.*.*.foo')
+    // .select('arr2dObj2.*.*.foo.bar')
 
-    .select('arrNest1.*.*.foo.bar.*.*')
-    .select('arrNest2.*.foo.*.bar.*.nar.*')
+    // .select('arrNest1.*.*.foo.bar.*.*')
+    // .select('arrNest2.*.foo.*.bar.*.nar.*')
 
-    .location('params')
+    // .location('params')
+
+    // TODO: select 'arrObj.*' instead of 'arrObj.*.foo'
+    .select(['arrObj.*.foo', 'arrObj.*.bar'])
+    .unstrict('arrObj.*')
     .build()
 
     // console.log(schema)
+    // console.log('\n', JSON.stringify(schema), '\n')
 
   if (!_.isEmpty(schema)) {
     req.halt(schema).then(result => {
