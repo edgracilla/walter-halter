@@ -8,7 +8,7 @@ walter-halter will not support chaining as it is intended to use the schema base
 `npm install --save walter-halter walter-builder`
 
 ## Usage
-Check `tests` for an in depth usage
+Check [tests](https://github.com/edgracilla/walter-halter/tree/master/test) for an in depth usage.
 
 ```js
 require('./model')()
