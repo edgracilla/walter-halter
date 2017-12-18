@@ -10,7 +10,13 @@ const mongoose = require('mongoose')
 const WalterBuilder = require('walter-builder')
 
 const server = restify.createServer({ name: 'myapp', version: '1.0.0'});
-let builder = new WalterBuilder({uuid: true, model: mongoose.model('TestModel')})
+let builder = new WalterBuilder({
+  uuid: true,
+  model: mongoose.model('TestModel'),
+  templates: {
+    unique: `Expecting unique value in '%1$s' field. %2$s, %3$s`,
+  }
+})
 
 server.use(restify.plugins.acceptParser(server.acceptable))
 server.use(restify.plugins.queryParser())
@@ -28,6 +34,8 @@ server.use(halter({
     }
   }
 }))
+
+console.log(builder.select('email').build())
 
 server.post('/hot-test', function (req, res, next) {
   let schema = builder
